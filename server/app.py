@@ -68,7 +68,7 @@ class RestaurantPizzasResource(Resource):
         try:
             price = data['price']
             if not (1 <= price <= 30):
-                raise ValueError("Price must be between 1 and 30")
+                raise ValueError("validation errors")
 
             new_restaurant_pizza = RestaurantPizza(
                 price=price,
